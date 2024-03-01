@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.AccountInfoFragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_account_circle_24px"
+            app:tint="@color/main_red"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/view_profile_title_text_size"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            tools:text="測試姓名"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="總在庫數"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTotalCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:gravity="end"
+            tools:text="111111"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="刊登總上架數"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTotalPublishingCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:gravity="end"
+            tools:text="222222"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="未上架車輛數"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvForSaleCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:gravity="end"
+            tools:text="333333"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="已成交車輛數"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvDealCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:gravity="end"
+            tools:text="444444"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:id="@+id/tvCarPublishingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:text="@string/profile_publish_count_value"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvHoldPoints"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:text="預扣儲值金 $ - - -"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/view_profile_item_vertical_padding"
+        android:layout_marginHorizontal="24dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_bottom_border_light_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            android:text="您還有"/>
+
+        <TextView
+            android:id="@+id/pointsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="12dp"
+            android:gravity="center"
+            android:textSize="@dimen/view_profile_item_value_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/main_red"
+            android:text="- - -"
+            tools:text="$0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/view_profile_item_title_text_size"
+            android:textStyle="bold"
+            android:text="儲值金"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

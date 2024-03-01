@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_car_editor_graph"
+    app:startDestination="@id/editorBasicInfoFragment">
+
+    <fragment
+        android:id="@+id/editorBasicInfoFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.editor.EditorBasicInfoFragment"
+        android:label="fragment_editor_basic_info"
+        tools:layout="@layout/fragment_editor_basic_info" >
+        <action
+            android:id="@+id/action_editorBasicInfoFragment_to_editorAccessoriesFragment"
+            app:destination="@id/editorAccessoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorAccessoriesFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.editor.EditorAccessoriesFragment"
+        android:label="fragment_editor_accessories"
+        tools:layout="@layout/fragment_editor_accessories" >
+        <action
+            android:id="@+id/action_editorAccessoriesFragment_to_editorPhotoFragment"
+            app:destination="@id/editorPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorPhotoFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.editor.EditorPhotoFragment"
+        android:label="fragment_editor_photo"
+        tools:layout="@layout/fragment_editor_photo" >
+        <action
+            android:id="@+id/action_editorPhotoFragment_to_editorFeatureDescFragment"
+            app:destination="@id/editorFeatureDescFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorFeatureDescFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.editor.EditorFeatureDescFragment"
+        android:label="fragment_editor_feature_desc"
+        tools:layout="@layout/fragment_editor_feature_desc" >
+        <action
+            android:id="@+id/action_editorFeatureDescFragment_to_editorContactInfoFragment"
+            app:destination="@id/editorContactInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorContactInfoFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.editor.EditorContactInfoFragment"
+        android:label="fragment_editor_contact_info"
+        tools:layout="@layout/fragment_editor_contact_info" />
+</navigation>

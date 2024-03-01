@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="聯絡人"
+                android:textSize="@dimen/view_editor_text_size"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="請輸入姓名或稱謂"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="手機"
+                android:textSize="@dimen/view_editor_text_size"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edCellPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:inputType="phone"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="例：09213345678"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey" >
+
+            <TextView
+                android:id="@+id/tvPhoneStar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvPhoneTitle"/>
+
+            <TextView
+                android:id="@+id/tvPhoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="市話"
+                android:textSize="@dimen/view_editor_text_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPhoneStar"
+                app:layout_constraintEnd_toStartOf="@id/edAreaCode"/>
+
+            <EditText
+                android:id="@+id/edAreaCode"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:inputType="phone"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="區碼"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPhoneTitle"
+                app:layout_constraintEnd_toStartOf="@id/tvPhoneDash"/>
+
+            <TextView
+                android:id="@+id/tvPhoneDash"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text=" - "
+                android:textSize="@dimen/view_editor_text_size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/edAreaCode"
+                app:layout_constraintEnd_toStartOf="@id/edTelephoneNumber"/>
+
+
+            <EditText
+                android:id="@+id/edTelephoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:inputType="phone"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="市話號碼"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPhoneDash"
+                app:layout_constraintEnd_toStartOf="@id/tvPhoneShape"/>
+
+            <TextView
+                android:id="@+id/tvPhoneShape"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text=" # "
+                android:textSize="@dimen/view_editor_text_size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/edTelephoneNumber"
+                app:layout_constraintEnd_toStartOf="@id/edPhoneExtNumber"/>
+
+            <EditText
+                android:id="@+id/edPhoneExtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:inputType="phone"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="分機"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPhoneShape"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="Line ID"
+                android:textSize="@dimen/view_editor_text_size"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edLineId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="填入Line ID"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="Line Url"
+                android:textSize="@dimen/view_editor_text_size"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edLineUrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="填入Line Url"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="*"
+                    android:textColor="@color/brand_red"
+                    android:textSize="@dimen/view_editor_text_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="賞車地址"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:paddingHorizontal="8dp"
+                    android:text="縣市"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <TextView
+                    android:id="@+id/tvCityCountyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="24dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/bg_gray_bottom_raduis16"
+                    android:gravity="center"
+                    android:text="- - -"
+                    android:textColor="@color/view_editor_value_text_color"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:paddingHorizontal="8dp"
+                    android:text=" - "
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:paddingHorizontal="8dp"
+                    android:text="地區"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <TextView
+                    android:id="@+id/tvDistrictValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="24dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/bg_gray_bottom_raduis16"
+                    android:gravity="center"
+                    android:text="- - -"
+                    android:textColor="@color/view_editor_value_text_color"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="*"
+                    android:textColor="@color/brand_red"
+                    android:textSize="@dimen/view_editor_text_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="實際賞車地址"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edAddressInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="實際門牌地址"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btCreateContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="新增聯絡人"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

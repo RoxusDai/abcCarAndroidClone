@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivSuccessIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_circle_24px"
+        app:tint="@color/green" />
+
+    <ImageView
+        android:id="@+id/ivFailedIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_error_24px"
+        app:tint="@color/main_red" />
+
+    <TextView
+        android:id="@+id/tvSuccessResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="驗證成功"/>
+
+    <TextView
+        android:id="@+id/tvFailedResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="驗證失敗"/>
+
+    <TextView
+        android:id="@+id/tvSuccessDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:text="此車符合免收費資格"/>
+
+    <TextView
+        android:id="@+id/tvFailedDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:textSize="12sp"
+        android:textColor="@color/brand_red"
+        android:gravity="center"
+        android:text="請檢查認證書編號 / 廠牌 / 年份"
+        />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/brand_red"
+        android:gravity="center"
+        tools:text="這裡是額外訊息"/>
+
+    <Button
+        android:id="@+id/btDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/main_blue"
+        android:textSize="16sp"
+        android:text="好的"/>
+
+
+</LinearLayout>

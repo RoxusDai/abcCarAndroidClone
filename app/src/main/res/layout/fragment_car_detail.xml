@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_basic_container"
+            android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailBasicInfoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_media_container"
+            android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailMediaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_spec_container"
+            android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailSpecFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_video_container"
+            android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailVideoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_certificate_container"
+            android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailCertificateFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <Button
+            android:id = "@+id/bt_line_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text = "加入abc LINE@~好車每日報"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            />
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rg_no_checked"
+            android:gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:checkedButton="@id/rb_detail_1"
+            >
+            <RadioButton
+                android:id="@+id/rb_detail_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_checked"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="車輛配備"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_detail_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="車輛描述"
+                android:textColor="@color/mid_gray"
+                android:textColorHighlight="@color/black"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_detail_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="聯絡人"
+                android:textColor="@color/mid_gray"
+                android:textColorHighlight="@color/black"
+                android:textStyle="bold" />
+        </RadioGroup>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_fragment_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_detail_graph"
+            />
+    </LinearLayout>
+</ScrollView>

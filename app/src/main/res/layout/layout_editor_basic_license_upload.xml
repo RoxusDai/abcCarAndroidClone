@@ -1,0 +1,447 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="2dp"
+        app:cardCornerRadius="@dimen/view_editor_card_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="是否為平輸車"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cbCarSourceFromImport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/brand_red"
+        android:text="提醒您若是平輸車請務必勾選「是」，並上傳平輸車資料以便核對監理站資料"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHotMemberCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="2dp"
+        app:cardCornerRadius="@dimen/view_editor_card_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/bg_bottom_border_light_grey">
+
+                <TextView
+                    android:id="@+id/tvHotVerifyIdStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="*"
+                    android:textColor="@color/brand_red"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="HOT認證書編號"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <EditText
+                    android:id="@+id/edHotCerIdValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:hint="輸入HOT認證書編號"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:lines="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvMileageUnit"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btCheckCerNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="@color/main_red"
+                android:text="檢查證書編號"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/brand_red"
+        android:text="1. 若為HOT認證車，請先於HOT官網上架此車輛\n2. 請填寫該車認證書編號並認證，系統判定是否符合
+免收費資格"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="2dp"
+        app:cardCornerRadius="@dimen/view_editor_card_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_bottom_border_light_grey">
+
+            <TextView
+                android:id="@+id/tvVerifyIdStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="*"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/view_editor_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/view_editor_item_padding"
+                android:text="車身號碼"
+                android:textSize="@dimen/view_editor_text_size" />
+
+            <EditText
+                android:id="@+id/edVerifyIdValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:textSize="@dimen/view_editor_text_size"
+                android:hint="輸入車身號碼"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:lines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvMileageUnit"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="即日起，同一帳號不得上架相同車身號碼車輛"
+        android:textColor="@color/mid_gray"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImportGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="@dimen/view_editor_card_corner_radius"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/bg_bottom_border_light_grey">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="*"
+                    android:textColor="@color/brand_red"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="請上傳有效的進口報關資料或交通部合格證明"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/ivImportDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="8dp"
+                    android:src="@drawable/ic_help_24px"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llSelectImportFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp">
+
+                <LinearLayout
+                    android:id="@+id/importFileDescGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/importDocFileButtonGroup">
+
+                    <TextView
+                        android:id="@+id/tvImportFileDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="@dimen/view_editor_item_padding"
+                        android:gravity="center"
+                        android:text="尚未選擇檔案"
+                        android:textColor="@color/mid_gray"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/importDocFileButtonGroup"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivImportPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/importDocFileButtonGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginVertical="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/importFileDescGroup"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/btUploadImportDoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="選擇檔案"
+                        android:textColor="@color/main_blue" />
+
+                    <TextView
+                        android:id="@+id/btDeleteImportFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="刪除檔案"
+                        android:textColor="@color/brand_red" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLicenseGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="2dp"
+        app:cardCornerRadius="@dimen/view_editor_card_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/bg_bottom_border_light_grey">
+
+                <TextView
+                    android:id="@+id/tvLicenseStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="*"
+                    android:textColor="@color/brand_red"
+                    android:textSize="@dimen/view_editor_text_size"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/view_editor_item_padding"
+                    android:text="行照(或領牌登記書、完稅證）"
+                    android:textSize="@dimen/view_editor_text_size" />
+
+                <ImageView
+                    android:id="@+id/ivLicenseDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="8dp"
+                    android:src="@drawable/ic_help_24px"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llSelectLicenseFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp">
+
+               <LinearLayout
+                   android:id="@+id/licenseFileGroup"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toStartOf="@id/licenseFileButtonGroup">
+
+                   <TextView
+                       android:id="@+id/tvLicenseFileDesc"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:paddingHorizontal="8dp"
+                       android:paddingVertical="@dimen/view_editor_item_padding"
+                       android:gravity="center"
+                       android:text="尚未選擇檔案"
+                       android:textColor="@color/mid_gray" />
+
+                   <ImageView
+                       android:id="@+id/ivLicensePreview"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+
+               </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/licenseFileButtonGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/licenseFileGroup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/btUploadLicense"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="選擇檔案"
+                        android:textColor="@color/main_blue"/>
+
+                    <TextView
+                        android:id="@+id/btDeleteLicenseFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="刪除檔案"
+                        android:textColor="@color/brand_red"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/view_editor_padding_horizontal"
+        android:paddingVertical="@dimen/view_editor_padding_vertical"
+        android:text="僅供查核，不會公開顯示請選擇圖檔或PDF文件"
+        android:textColor="@color/mid_gray"/>
+
+</LinearLayout>

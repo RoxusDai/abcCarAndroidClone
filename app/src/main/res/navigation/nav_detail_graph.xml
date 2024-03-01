@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_detail_graph"
+    app:startDestination="@id/DetailAccessoriesFragment"
+    >
+
+    <fragment
+        android:id="@+id/DetailAccessoriesFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailAccessoriesFragment"
+        tools:layout="@layout/fragment_detail_accessories"
+        >
+        <action
+            android:id = "@+id/detail1_to_detail2"
+            app:destination="@id/DetailDescribeFragment"
+            />
+        <action
+            android:id = "@+id/detail1_to_detail3"
+            app:destination = "@id/DetailContactFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailDescribeFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailDescribeFragment"
+        tools:layout="@layout/fragment_detail_describe"
+        >
+        <action
+            android:id = "@+id/detail2_to_detail3"
+            app:destination = "@id/DetailContactFragment"
+            />
+        <action
+            android:id = "@+id/detail2_to_detail1"
+            app:destination="@id/DetailAccessoriesFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailContactFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.DetailContactFragment"
+        tools:layout="@layout/fragment_detail_contact"
+
+        >
+        <action
+            android:id = "@+id/detail3_to_detail1"
+            app:destination="@id/DetailAccessoriesFragment"
+            />
+        <action
+            android:id = "@+id/detail3_to_detail2"
+            app:destination="@id/DetailDescribeFragment"
+            />
+    </fragment>
+</navigation>

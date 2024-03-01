@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/carInfoListFragment">
+    <fragment
+        android:id="@+id/carInfoListFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.CarInfoListFragment"
+        android:label="車輛管理"
+        tools:layout="@layout/fragment_car_info_list" >
+        <action
+            android:id="@+id/action_carInfoListFragment_to_carSortFragment"
+            app:destination="@id/sortFragment">
+        </action>
+        <action
+            android:id="@+id/action_carInfoListFragment_to_accountInfoFragment"
+            app:destination="@id/accountInfoFragment" />
+        <action
+            android:id="@+id/action_carInfoListFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_carInfoListFragment_to_carDetailFragment"
+            app:destination="@id/carDetailFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/sortFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.CarSortFragment"
+        android:label="請選擇排序方式"
+        tools:layout = "@layout/fragment_car_sort">
+    </fragment>
+    <fragment
+        android:id="@+id/accountInfoFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.AccountInfoFragment"
+        android:label="帳號資訊"
+        tools:layout="@layout/fragment_account_info" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.AboutFragment"
+        android:label="關於"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id = "@+id/action_about_to_changepassword"
+            app:destination="@id/changePasswordFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.detail.CarDetailFragment"
+        android:label = "詳細"
+        tools:layout="@layout/fragment_car_detail"
+        />
+    <fragment
+        android:id = "@+id/changePasswordFragment"
+        android:name="com.easyrent.abccarapp.abccar.ui.fragment.ChangePasswordFragment"
+        android:label = "變更密碼"
+        tools:layout="@layout/fragment_change_password"
+        />
+
+</navigation>

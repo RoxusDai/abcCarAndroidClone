@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.editor.EditorContactInfoFragment">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/car_editor_toolbar_layout" />
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_toolbar_bottom_board"
+        android:background="@color/black"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/clTableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivStepProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="@dimen/view_editor_padding_horizontal"
+            android:src="@drawable/img_editot_step_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tlContactInfoContainer"/>
+
+        <LinearLayout
+            android:id="@+id/tlContactInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ivStepProgress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@color/light_gray"
+                    android:text="從通訊錄選擇"/>
+
+                <TextView
+                    android:id="@+id/tvCreateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="新增聯絡人"/>
+
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/contactGroup"
+                layout="@layout/layout_editor_contact_list"
+                android:visibility="visible"/>
+
+            <include
+                android:id="@+id/createGroup"
+                layout="@layout/layout_editor_create_contact_table"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

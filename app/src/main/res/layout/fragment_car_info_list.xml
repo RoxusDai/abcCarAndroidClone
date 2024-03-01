@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CarInfoListFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/sv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/rb_checked"
+            android:iconifiedByDefault="false"
+
+            app:queryHint="@string/Search_Hint" />
+
+        <RadioGroup
+            android:id="@+id/rg_car_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rg_no_checked"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_source_abc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_checked"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/source_abc"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_source_external"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/source_external"
+                android:textColor="@color/mid_gray"
+                android:textColorHighlight="@color/black"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_source_easy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/source_easy"
+                android:textColor="@color/mid_gray"
+                android:textColorHighlight="@color/black"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/rl_car_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/sp_car_brand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/filter_spinner_height"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/rl_spinner_anchor"
+                android:layout_weight="1"
+                android:background="@drawable/sp_background"
+                android:popupBackground="@drawable/rb_checked"
+                android:prompt="@string/select_brand"
+                />
+
+            <View
+                android:id="@+id/rl_spinner_anchor"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true" />
+
+
+            <Spinner
+                android:id="@+id/sp_car_category"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/filter_spinner_height"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/rl_spinner_anchor"
+                android:layout_weight="1"
+                android:background="@drawable/sp_background"
+                android:popupBackground="@drawable/rb_checked"
+                android:prompt="@string/select_category"
+
+                />
+
+            <Spinner
+                android:id="@+id/sp_car_status"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/filter_spinner_height"
+                android:layout_below="@id/sp_car_brand"
+                android:layout_marginVertical="7dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/rl_spinner_anchor"
+                android:layout_weight="1"
+                android:background="@drawable/sp_background"
+                android:popupBackground="@drawable/rb_checked"
+                android:prompt="@string/select_status" />
+
+            <Button
+                android:id="@+id/bt_reset_filter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/filter_spinner_height"
+                android:layout_below="@id/sp_car_category"
+                android:layout_marginVertical="7dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/sp_car_status"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_reset_filter"
+                android:text="@string/reset_filter" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_no_car_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/car_list_nodata"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btCreateInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_filter" />
+
+    <LinearLayout
+        android:id="@+id/llListGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/btCreateInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_filter">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCarInfoList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCreateInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/main_red"
+        android:text="@string/add_info_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llListGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

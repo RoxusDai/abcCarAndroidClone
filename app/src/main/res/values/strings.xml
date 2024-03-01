@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">abc好車網</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="implement_yet_desc">尚未開放</string>
+
+    <string name="start_date_desc">上架日期：%s</string>
+    
+    <!-- 帳號資料 -->
+    <string name="profile_publish_count_value">上架數 %d</string>
+    <string name="profile_pre_deduct_point_value">預扣儲值金 $%d</string>
+    <string name="forget_password">忘記密碼?</string>
+
+    <!-- BasicInfoTable -->
+    <string name="basic_info_table_title">新增物件</string>
+    <string name="table_info_undefine_desc">- - -</string>
+    <string name="please_select_brand">請選擇廠牌</string>
+    <string name="please_select_brand_first">請先選擇廠牌</string>
+    <string name="please_select_category">請選擇車型</string>
+    <string name="please_select_manufacture_year">請選擇出廠年份</string>
+    <string name="please_select_manufacture_month">請選擇月份</string>
+    <string name="please_select_model">請選擇車款</string>
+    <string name="please_select_transmission">請選擇傳動系統</string>
+    <string name="please_select_gear">請選擇變速系統</string>
+    <string name="please_select_fuel_type">請選擇燃油種類</string>
+    <string name="please_select_displacement">請選擇排氣量</string>
+    <string name="please_select_passenger_number">請選擇乘客人數</string>
+    <string name="please_select_color">請選擇顏色</string>
+    <string name="file_pickup_desc">請選擇檔案</string>
+    <string name="please_select_year">請選擇年份</string>
+    <string name="ceiling_price_lower_then_basic_desc">最高價格不得低於最低價格</string>
+    <string name="basic_price_over_error_desc">不得高於最低價格兩成, %s萬</string>
+
+    <string name="Search_Hint">搜尋ID/名稱/廠牌/車型/年份</string>
+    <string name="add_info_button">新增物件</string>
+    <string name="select_brand">選擇廠牌</string>
+    <string name="select_category">選擇車型</string>
+
+    <!-- ContactInfo -->
+    <string name="contact_phone_number">%s | %s</string>
+    <string name="contact_info_line_id">Line ID: %s</string>
+    <string name="contact_info_line_url">Line Url: %s</string>
+
+    <!--filter-->
+    <string name="source_abc">abc車源</string>
+    <string name="source_external">外部車源</string>
+    <string name="source_easy">簡易刊登車源</string>
+    <string name="select_status">選擇狀態</string>
+    <string name="reset_filter">清除篩選</string>
+
+</resources>

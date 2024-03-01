@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_blue">#307AFF</color>
+    <color name="deep_blue">#3177B5</color>
+    <color name="light_blue">#1DA6D0</color>
+
+    <color name="main_red">#FF3334</color>
+    <color name="brand_red">#D7000F</color>
+    <color name="pink_red">#EBD9DE</color>
+
+    <color name="yellow">#FFCA36</color>
+
+    <color name="green">#3CC759</color>
+    <color name="light_green">#AFFFAF</color>
+
+    <color name="paler">#FBFCFE</color>
+    <color name="light_gray">#CED4DE</color>
+    <color name="mid_gray">#71747A</color>
+    <color name="dark_gray">#424447</color>
+
+    <!-- Editor table value color -->
+    <color name="view_editor_value_text_color">#71747A</color>
+
+    <color name="alpha">#00000000</color>
+</resources>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.editor.EditorFeatureDescFragment">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/car_editor_toolbar_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/space" />
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_toolbar_bottom_board"
+        android:background="@color/black"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/clTableContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/view_editor_container_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:paddingHorizontal="@dimen/view_editor_padding_horizontal"
+                android:src="@drawable/img_editot_step_4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/view_editor_title_text_size"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:text="特色標題"/>
+
+                <EditText
+                    android:id="@+id/edFeatureDescInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="車輛特色，至多40字"
+                    android:paddingVertical="16dp"
+                    android:paddingHorizontal="8dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="重試"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_toolbar_bottom_board"
+                android:background="@color/black"
+                android:layout_marginVertical="16dp" />
+
+            <com.easyrent.abccarapp.abccar.ui.component.EditorTagsSelector
+                android:id="@+id/featureDescSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="特色標籤"
+                app:picked_empty_desc="請選擇特色標籤"
+                app:all_picked_desc="特色標籤已全選" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_toolbar_bottom_board"
+                android:background="@color/black"
+                android:layout_marginVertical="16dp" />
+
+            <com.easyrent.abccarapp.abccar.ui.component.EditorTagsSelector
+                android:id="@+id/equippedEnsureSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="保證項目"
+                app:picked_empty_desc="請選擇保證項目"
+                app:all_picked_desc="保證項目已全選" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_toolbar_bottom_board"
+                android:background="@color/black"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@drawable/bg_editor_card_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/view_editor_title_text_size"
+                        android:textStyle="bold"
+                        android:text="認證書"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/view_editor_title_text_size"
+                        android:textColor="@color/mid_gray"
+                        android:paddingHorizontal="8dp"
+                        android:text="(最多5筆，檔案大小限10MB以下)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvListEmptyDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textSize="@dimen/view_editor_title_text_size"
+                        android:textColor="@color/mid_gray"
+                        android:gravity="center"
+                        android:text="無認證書"/>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btAddCerItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="新增一認證書"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textColor="@color/mid_gray"
+                android:text="請選擇圖檔或PDF文件"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_toolbar_bottom_board"
+                android:background="@color/black"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_editor_card_background">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/view_editor_title_text_size"
+                        android:text="車輛說明"/>
+
+                    <LinearLayout
+                        android:id="@+id/tvGetTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/bg_edit_car_list_publish_button"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_download_24px"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="代入模版"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_toolbar_bottom_board"
+                    android:layout_margin="8dp"
+                    android:background="@color/dark_gray"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etTemplateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:text="下一步"
+                android:backgroundTint="@color/main_blue"/>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

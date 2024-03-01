@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        app:cardCornerRadius="8dp"
+        >
+        <ImageView
+            android:id = "@+id/iv_car_cover"
+            android:layout_width="@dimen/detail_car_width"
+            android:layout_height="@dimen/detail_car_height"
+            android:scaleType="centerCrop"
+            tools:src="@color/light_gray"
+            />
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_gravity="center_horizontal"
+        >
+        <androidx.cardview.widget.CardView
+            android:id = "@+id/cv_detail_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="6dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/light_gray"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src = "@drawable/ic_detail_car_id"
+                    />
+                <TextView
+                    android:id = "@+id/tv_detail_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "12345678"
+                    android:textColor="@color/mid_gray"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="4dp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@id/cv_detail_id"
+            android:layout_alignParentStart="true"
+            >
+            <TextView
+                android:id="@+id/tv_detail_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/alpha"
+                android:gravity="center"
+                tools:text="上架中"
+                />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id = "@+id/tv_detail_caution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_detail_id"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_edit_car_list_number_check_status"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/main_red"
+            android:textSize="12sp"
+            >
+
+        </TextView>
+    </RelativeLayout>
+    <TextView
+        android:id = "@+id/tv_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text =" "
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id = "@+id/tv_detail_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/brand_red"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
